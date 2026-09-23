@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Web", "MovieApi.Web\MovieApi.Web.csproj", "{F64E3BAC-D701-4C13-A6A9-38E64CE5A8B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Contracts", "MovieApi.Contracts\MovieApi.Contracts.csproj", "{A870A664-5D22-45EF-B2B3-D959D61F6852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Domain", "MovieApi.Domain\MovieApi.Domain.csproj", "{458DB16B-4126-43E6-9336-28FF3598B81B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Core", "MovieApi.Core\MovieApi.Core.csproj", "{E8820731-448D-4FE3-A513-A272045988B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Infrastructure.Postgres", "MovieApi.Infrastructure.Postgres\MovieApi.Infrastructure.Postgres.csproj", "{62A14881-DDCC-46CF-B30C-C72C396E09DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Tests", "MovieApi.Tests\MovieApi.Tests.csproj", "{35467573-3AC7-41A4-B0DA-6995537F0C45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Infrastructure.Minio", "MovieApi.Infrastructure.Minio\MovieApi.Infrastructure.Minio.csproj", "{1DEF3A31-BABE-4C88-AA09-F454ED1EDED9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F64E3BAC-D701-4C13-A6A9-38E64CE5A8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64E3BAC-D701-4C13-A6A9-38E64CE5A8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64E3BAC-D701-4C13-A6A9-38E64CE5A8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64E3BAC-D701-4C13-A6A9-38E64CE5A8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A870A664-5D22-45EF-B2B3-D959D61F6852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A870A664-5D22-45EF-B2B3-D959D61F6852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A870A664-5D22-45EF-B2B3-D959D61F6852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A870A664-5D22-45EF-B2B3-D959D61F6852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{458DB16B-4126-43E6-9336-28FF3598B81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458DB16B-4126-43E6-9336-28FF3598B81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458DB16B-4126-43E6-9336-28FF3598B81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{458DB16B-4126-43E6-9336-28FF3598B81B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8820731-448D-4FE3-A513-A272045988B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8820731-448D-4FE3-A513-A272045988B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8820731-448D-4FE3-A513-A272045988B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8820731-448D-4FE3-A513-A272045988B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62A14881-DDCC-46CF-B30C-C72C396E09DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A14881-DDCC-46CF-B30C-C72C396E09DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A14881-DDCC-46CF-B30C-C72C396E09DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A14881-DDCC-46CF-B30C-C72C396E09DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35467573-3AC7-41A4-B0DA-6995537F0C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35467573-3AC7-41A4-B0DA-6995537F0C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35467573-3AC7-41A4-B0DA-6995537F0C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35467573-3AC7-41A4-B0DA-6995537F0C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEF3A31-BABE-4C88-AA09-F454ED1EDED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEF3A31-BABE-4C88-AA09-F454ED1EDED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEF3A31-BABE-4C88-AA09-F454ED1EDED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEF3A31-BABE-4C88-AA09-F454ED1EDED9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C83FDA8E-E325-45D1-AB92-0949D751AF50}
+	EndGlobalSection
+EndGlobal
