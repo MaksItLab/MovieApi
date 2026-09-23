@@ -1,0 +1,73 @@
+name: Movie API CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**"
+      - ".github/workflows/movie-api-ci.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**"
+      - ".github/workflows/movie-api-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Restore, build and test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore packages
+        run: dotnet restore MovieApi.sln
+
+      - name: Build Release
+        run: dotnet build MovieApi.sln --configuration Release --no-restore
+
+      - name: Run tests
+        run: >-
+          dotnet test MovieApi.sln --configuration Release --no-build
+          --logger "trx;LogFileName=movie-api-tests.trx"
+          --results-directory MovieApi.Tests
+
+      - name: Upload test results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: movie-api-test-results
+          path: MovieApi.Tests
+          if-no-files-found: ignore
+
+  docker:
+    name: Build Docker image
+    needs: test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Build image
+        run: >-
+          docker build
+          --file MovieApi.Web/Dockerfile
+          --tag movie-api:ci
+          .
